@@ -45,6 +45,25 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
 @media(max-width:860px){.shell{width:min(calc(100% - 38px),1160px)}.header-inner{height:68px}.navlinks{gap:16px}.hero{min-height:0;padding:65px 0 90px}.about-layout{gap:28px;grid-template-columns:1fr .62fr}.about-aside{transform:scale(.75)}.topics-intro{align-items:start;flex-direction:column;gap:4px}.topics-intro p{margin-bottom:0}.topic-card{padding:27px}.section{padding-top:83px;padding-bottom:83px}.join-band{padding:42px}}
 @media(max-width:620px){.shell{width:calc(100% - 36px)}.header-inner{height:64px}.brand{font-size:19px}.navlinks{display:none}.header-cta{font-size:10px;padding:10px 12px}.hero{padding:53px 0 76px}.hero-art{width:calc(100% + 24px);margin-left:-12px;margin-top:22px;margin-bottom:8px}.hero-label{font-size:clamp(29px,8vw,43px);margin-top:0;margin-bottom:14px}.hero-desc{font-size:15px;line-height:1.6;max-width:350px}.eyebrow{font-size:9px;gap:8px;letter-spacing:.06em}.hero-stats{margin-top:22px;gap:8px}.stat{font-size:9px;padding:8px 9px}.action-row{flex-direction:column;gap:10px;margin-top:27px}.action-row .button{width:100%;max-width:360px}.floating-cross{font-size:17px}.cross-a{left:3%;top:25px}.cross-b{right:5%;top:37px}.cross-c{display:none}.section{padding-top:73px;padding-bottom:73px}h2{font-size:clamp(36px,10vw,51px)}.about-layout{grid-template-columns:1fr;gap:0}.about-copy{font-size:16px;line-height:1.75}.about-aside{display:none}.topic-grid{grid-template-columns:1fr;gap:16px;margin-top:30px}.topic-card{min-height:0;padding:26px 24px 31px}.topic-card h3{font-size:34px;margin-top:24px}.topic-card p{font-size:15px}.topic-list{margin-top:22px}.topic-list span{font-size:10px}.marquee-inner{font-size:10px;padding:10px 0}.join-section{padding-top:10px}.join-band{padding:32px 23px}.join-band h2{font-size:38px}.join-band>p{font-size:15px}.join-actions{flex-direction:column}.join-actions .button{width:100%}.join-fineprint{font-size:10px}.footer-inner{gap:12px}.footer-right{font-size:10px}.orbit{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Speaker lineup — additive styles only */
+.speakers-section{border-top:1px solid #252331;background:linear-gradient(180deg,rgba(17,17,26,.8),rgba(6,6,9,0) 90%)}
+.speakers-intro{max-width:760px;font-size:17px;line-height:1.65;color:#b4b4c6;margin:18px 0 0}
+.speaker-tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:43px}
+.speaker-track{min-width:0}
+.speaker-track-label{font:700 12px 'Space Mono',monospace;letter-spacing:.1em;margin:0 0 16px;color:var(--pink)}
+.speaker-track.tech .speaker-track-label{color:var(--cyan)}
+.speaker-card{height:100%;background:#101016;border:1px solid #34313f;border-top:3px solid var(--pink);padding:29px 28px 32px;overflow-wrap:anywhere}
+.speaker-track.tech .speaker-card{border-top-color:var(--cyan)}
+.speaker-time{font:700 11px 'Space Mono',monospace;letter-spacing:.06em;color:var(--lime)}
+.speaker-card h3{font:700 clamp(23px,2.5vw,31px)/1.19 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:17px 0 20px}
+.speaker-names{display:flex;flex-wrap:wrap;gap:7px;align-items:baseline;font:700 14px 'Space Grotesk',sans-serif;margin:0 0 20px}
+.speaker-names a{color:var(--cyan);text-decoration:underline;text-decoration-color:#436876;text-underline-offset:4px}
+.speaker-names a:hover{color:var(--lime)}
+.speaker-track.career .speaker-names a{color:var(--pink)}
+.speaker-track.career .speaker-names a:hover{color:var(--lime)}
+.speaker-abstract{color:#c3c2d1;font-size:15px;line-height:1.75;margin:0}
+@media(max-width:700px){.speaker-tracks{grid-template-columns:1fr;gap:34px}.speaker-card{padding:25px 22px 28px}.speaker-card h3{font-size:26px}}
 </style>
 </head>
 <body>
@@ -52,7 +71,7 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
 <header>
   <div class="shell header-inner">
     <a class="brand" href="#top" aria-label="RUN TECH.EXE home">RUN <i>TECH</i><b>.EXE</b><span class="brand-dot" aria-hidden="true"></span></a>
-    <nav class="navlinks" aria-label="Main navigation"><a href="#about">THE VIBE</a><a href="#topics">TALK TOPICS</a><a href="#join">GET INVOLVED</a></nav>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#about">THE VIBE</a><a href="#topics">TALK TOPICS</a><a href="#speakers">SPEAKERS</a><a href="#join">GET INVOLVED</a></nav>
     <a class="header-cta" data-form="attendee" href="#join">GRAB A SPOT ↗</a>
   </div>
 </header>
@@ -84,10 +103,35 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
     </div>
     <div class="topics-note">✦ Final talk lineup and joining details will be shared with registered attendees.</div>
   </div></section>
+  <section id="speakers" class="speakers-section" aria-labelledby="speakers-heading"><div class="shell section">
+    <div class="section-kicker">TALKS + SPEAKERS</div>
+    <h2 id="speakers-heading">THE TALKS.<br><span class="accent-pink">THE VOICES.</span></h2>
+    <p class="speakers-intro">Explore the talks and meet the speakers bringing them to life. More sessions are on the way!</p>
+    <div class="speaker-tracks">
+      <div class="speaker-track career">
+        <h3 class="speaker-track-label">01 / CAREER TALKS</h3>
+        <article class="speaker-card">
+          <div class="speaker-time">11 AM SESSION BLOCK · CENTRAL</div>
+          <h3>Dear Rejection Email: Thank You, Next — How AI Changed My Job Search Forever</h3>
+          <div class="speaker-names"><a href="https://www.linkedin.com/in/shailygoyal/" target="_blank" rel="noopener noreferrer" aria-label="Shaily Goyal on LinkedIn (opens in new tab)">Shaily Goyal ↗</a></div>
+          <p class="speaker-abstract">This session explores how AI can transform the job search process, from resume optimization and personalized applications to interview preparation and identifying career opportunities. Through my personal experiences, I’ll share how leveraging AI tools can make job searching more strategic, efficient, and personalized, while emphasizing the importance of authenticity, continuous learning, and resilience in navigating rejection and building a successful career.</p>
+        </article>
+      </div>
+      <div class="speaker-track tech">
+        <h3 class="speaker-track-label">02 / TECH TALKS</h3>
+        <article class="speaker-card">
+          <div class="speaker-time">11 AM SESSION BLOCK · CENTRAL</div>
+          <h3>Building CropMerge: Turning Drone Imagery into Practical Farm Insights</h3>
+          <div class="speaker-names"><a href="https://www.linkedin.com/in/kash-setty-21aa78290/" target="_blank" rel="noopener noreferrer" aria-label="Kash Setty on LinkedIn (opens in new tab)">Kash Setty ↗</a><span>&amp;</span><a href="https://www.linkedin.com/in/robbie-harris-7a0491285/" target="_blank" rel="noopener noreferrer" aria-label="Robbie Harris on LinkedIn (opens in new tab)">Robbie Harris ↗</a></div>
+          <p class="speaker-abstract">CropMerge is building software that helps growers use drone imagery within their existing scouting workflows. I’ll walk through our RGB image-processing approach, including preserving source photographs and producing source-linked reports for human review. The session will explore how farmer feedback and field validation help us assess which observations could be useful, and where the limits of image-based analysis matter.</p>
+        </article>
+      </div>
+    </div>
+  </div></section>
   <section id="join" class="join-section shell" aria-labelledby="join-heading"><div class="join-band">
     <div class="section-kicker">LET'S MAKE IT HAPPEN</div><h2 id="join-heading">GOOD THINGS<br><span class="accent-lime">START HERE.</span></h2><p>Come to learn and connect, propose a talk, or join the behind-the-scenes crew. We’re seeking speakers on careers, hiring, and emerging tech, plus LinkedIn Group Owners, Google Meet moderators, and administrative helpers.</p>
     <div class="join-actions"><a class="button button-lime" data-form="attendee" href="#join">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a class="button button-cyan" data-form="speaker" href="#join">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a class="button button-outline" data-form="volunteer" href="#join">VOLUNTEER WITH US <strong aria-hidden="true">↗</strong></a></div>
-    <div class="join-fineprint">The event is virtual. Meeting links will be provided to registered attendees separately.</div>
+    <div class="join-fineprint"><strong>All forms close Saturday, October 24, 2026 at 11:59 PM CT.</strong><br>The event is virtual. Meeting links will be provided to registered attendees separately.</div>
   </div></section>
 </main>
 <footer><div class="shell footer-inner"><div class="footer-name">RUN <span>TECH.EXE</span></div><div class="footer-right"><div>INSERT CURIOSITY. RUN POSSIBILITIES. &nbsp; <a href="#top">BACK TO TOP ↑</a></div><div class="footer-credits">Hosted by <a href="https://www.linkedin.com/in/jaraicarter/" target="_blank" rel="noopener noreferrer" aria-label="Jarai Carter, Ph.D. LinkedIn profile (opens in new tab)">Jarai Carter, Ph.D. ↗</a> · © 2026 The Career Corner, LLC. All rights reserved.</div></div></div></footer>
