@@ -49,11 +49,11 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
 /* Speaker lineup — additive styles only */
 .speakers-section{border-top:1px solid #252331;background:linear-gradient(180deg,rgba(17,17,26,.8),rgba(6,6,9,0) 90%)}
 .speakers-intro{max-width:760px;font-size:17px;line-height:1.65;color:#b4b4c6;margin:18px 0 0}
-.speaker-tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:43px}
+.speaker-tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:43px;align-items:start}
 .speaker-track{min-width:0}
 .speaker-track-label{font:700 12px 'Space Mono',monospace;letter-spacing:.1em;margin:0 0 16px;color:var(--pink)}
 .speaker-track.tech .speaker-track-label{color:var(--cyan)}
-.speaker-card{height:100%;background:#101016;border:1px solid #34313f;border-top:3px solid var(--pink);padding:29px 28px 32px;overflow-wrap:anywhere}
+.speaker-card{height:auto;background:#101016;border:1px solid #34313f;border-top:3px solid var(--pink);padding:29px 28px 32px;overflow-wrap:anywhere}
 .speaker-track.tech .speaker-card{border-top-color:var(--cyan)}
 .speaker-time{font:700 11px 'Space Mono',monospace;letter-spacing:.06em;color:var(--lime)}
 .speaker-card h3{font:700 clamp(23px,2.5vw,31px)/1.19 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:17px 0 20px}
@@ -63,6 +63,8 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
 .speaker-track.career .speaker-names a{color:var(--pink)}
 .speaker-track.career .speaker-names a:hover{color:var(--lime)}
 .speaker-abstract{color:#c3c2d1;font-size:15px;line-height:1.75;margin:0}
+.speaker-card + .speaker-card{margin-top:18px}
+.speaker-abstract + .speaker-abstract{margin-top:13px}
 @media(max-width:700px){.speaker-tracks{grid-template-columns:1fr;gap:34px}.speaker-card{padding:25px 22px 28px}.speaker-card h3{font-size:26px}}
 </style>
 </head>
@@ -116,6 +118,12 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
           <div class="speaker-names"><a href="https://www.linkedin.com/in/shailygoyal/" target="_blank" rel="noopener noreferrer" aria-label="Shaily Goyal on LinkedIn (opens in new tab)">Shaily Goyal ↗</a></div>
           <p class="speaker-abstract">This session explores how AI can transform the job search process, from resume optimization and personalized applications to interview preparation and identifying career opportunities. Through my personal experiences, I’ll share how leveraging AI tools can make job searching more strategic, efficient, and personalized, while emphasizing the importance of authenticity, continuous learning, and resilience in navigating rejection and building a successful career.</p>
         </article>
+        <article class="speaker-card">
+          <div class="speaker-time">1 PM SESSION BLOCK · CENTRAL</div>
+          <h3>Standing Out When Everyone Has the Same Tools: A 45-minute career playbook for early-career tech in the age of AI</h3>
+          <div class="speaker-names"><a href="https://www.linkedin.com/in/bri-flynn/" target="_blank" rel="noopener noreferrer" aria-label="Bri Flynn, Ph.D. on LinkedIn (opens in new tab)">Bri Flynn, Ph.D. ↗</a></div>
+          <p class="speaker-abstract">Everyone on your team now has the same AI tools, and the tasks that used to train new engineers, analysts, and designers are the ones AI does first. So how do you stand out in your first few years? In this interactive session, we’ll look at why the early-career market is changing shape (from pyramid to diamond), why AI access is equal but AI leverage is not, and where human judgment still sets the price. You’ll practice that judgment in a live exercise. Then you’ll score yourself on the Four C’s (Career, Capabilities, Capacity, and Character) and leave with one specific, dated, accountable action for the next 30 days.</p>
+        </article>
       </div>
       <div class="speaker-track tech">
         <h3 class="speaker-track-label">02 / TECH TALKS</h3>
@@ -124,6 +132,31 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
           <h3>Building CropMerge: Turning Drone Imagery into Practical Farm Insights</h3>
           <div class="speaker-names"><a href="https://www.linkedin.com/in/kash-setty-21aa78290/" target="_blank" rel="noopener noreferrer" aria-label="Kash Setty on LinkedIn (opens in new tab)">Kash Setty ↗</a><span>&amp;</span><a href="https://www.linkedin.com/in/robbie-harris-7a0491285/" target="_blank" rel="noopener noreferrer" aria-label="Robbie Harris on LinkedIn (opens in new tab)">Robbie Harris ↗</a></div>
           <p class="speaker-abstract">CropMerge is building software that helps growers use drone imagery within their existing scouting workflows. I’ll walk through our RGB image-processing approach, including preserving source photographs and producing source-linked reports for human review. The session will explore how farmer feedback and field validation help us assess which observations could be useful, and where the limits of image-based analysis matter.</p>
+        </article>
+        <article class="speaker-card">
+          <div class="speaker-time">12 PM SESSION BLOCK · CENTRAL</div>
+          <h3>Enterprise AI Agents</h3>
+          <div class="speaker-names">Speaker details coming soon</div>
+          <p class="speaker-abstract">Abstract coming soon.</p>
+        </article>
+        <article class="speaker-card">
+          <div class="speaker-time">1 PM SESSION BLOCK · CENTRAL</div>
+          <h3>How To Create Simulation Data</h3>
+          <div class="speaker-names">Speaker details coming soon</div>
+          <p class="speaker-abstract">Abstract coming soon.</p>
+        </article>
+        <article class="speaker-card">
+          <div class="speaker-time">2 PM SESSION BLOCK · CENTRAL</div>
+          <h3>UX and AI</h3>
+          <div class="speaker-names">Speaker details coming soon</div>
+          <p class="speaker-abstract">Abstract coming soon.</p>
+        </article>
+        <article class="speaker-card">
+          <div class="speaker-time">4 PM SESSION BLOCK · CENTRAL</div>
+          <h3>Healthcare AI Is a Systems Problem. Let's Talk About the System</h3>
+          <div class="speaker-names"><a href="https://www.linkedin.com/in/gsaijahnavi/" target="_blank" rel="noopener noreferrer" aria-label="Sai Jahnavi on LinkedIn (opens in new tab)">Sai Jahnavi ↗</a></div>
+          <p class="speaker-abstract">Getting into healthcare data science is more difficult than most industries and this is not because tech skills are different, but because the domain is unlike anything else. And nobody really teaches you that part. That’s what this talk is for. The U.S. spends $4.5 trillion a year on healthcare, and yet doctors spend more time charting than caring for patients. Hospitals lose millions of dollars due to preventable readmissions and coding errors, most of which are hidden in claims data. The data is already there. What’s needed is context like where it comes from, why it looks like it does, and how to model it so it actually works in the real world.</p>
+          <p class="speaker-abstract">We will take a patient journey from the point of hospitalization to data, billing, and finally to a modeling task. We will then discuss where AI adds value and how to build responsibly when real patients are involved. This talk is for data scientists and analysts interested in healthcare but feel like they are missing the bigger picture.</p>
         </article>
       </div>
     </div>
