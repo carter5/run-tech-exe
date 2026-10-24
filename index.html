@@ -39,6 +39,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(39px,6vw,76px);font-we
 .topics-note{margin-top:26px;font:12px/1.7 'Space Mono',monospace;color:#a9a9bc}
 .join-section{padding-top:70px;padding-bottom:100px}.join-band{position:relative;isolation:isolate;border:1px solid #3c3c4b;padding:63px;background:linear-gradient(135deg,rgba(188,44,139,.09),rgba(70,48,147,.07) 42%,rgba(14,211,224,.07));overflow:hidden}.join-band::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--lime),var(--pink),var(--cyan))}.join-band::after{content:'✳';position:absolute;right:36px;top:8px;color:rgba(66,233,245,.14);font-size:150px;z-index:-1}
 .join-band h2{font-size:clamp(36px,5.2vw,65px);margin-bottom:15px}.join-band>p{color:#bbb9c8;font-size:17px;line-height:1.6;max-width:690px;margin:0 0 30px}.join-actions{display:flex;gap:14px;flex-wrap:wrap}.join-fineprint{margin-top:23px;font:11px/1.7 'Space Mono',monospace;color:#aaa9b9}
+.form-deadlines{margin:22px auto 0;max-width:780px;border:1px solid #353547;border-left:3px solid var(--lime);background:rgba(13,13,21,.85);padding:14px 19px;font:12px/1.75 'Space Mono',monospace;color:#e0dfeb}.form-deadlines p{margin:0}.form-deadlines p+p{margin-top:5px}.form-deadlines strong{color:var(--lime)}
 footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:108px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;padding-bottom:24px}.footer-name{font:700 20px 'Space Grotesk',sans-serif;letter-spacing:-.04em}.footer-name span{color:var(--lime)}.footer-right{font:11px 'Space Mono',monospace;color:#91909f}.footer-credits{margin-top:11px;line-height:1.7;color:#a7a6b3}.footer-right a{text-decoration:underline;text-decoration-color:#484858;text-underline-offset:4px}.footer-right a:hover{color:var(--lime)}
 #toast{position:fixed;z-index:100;left:50%;bottom:24px;transform:translateX(-50%);max-width:calc(100vw - 35px);display:none;background:var(--lime);color:#101113;padding:14px 18px;box-shadow:5px 5px 0 var(--pink);font:700 12px 'Space Mono',monospace;text-align:center}#toast.on{display:block}
 @media(min-width:1200px){.hero{min-height:685px}}
@@ -87,6 +88,7 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
       <p class="hero-desc">A virtual pop-up conference for fresh tech ideas, real career conversations, and the people who make both more interesting.</p>
       <div class="hero-stats"><span class="stat"><b>●</b> 100% ONLINE</span><span class="stat">11 AM–5 PM CENTRAL</span><span class="stat" data-event-date>DATE COMING SOON</span></div>
       <div class="action-row"><a href="#join" data-form="attendee" class="button button-lime">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a href="#join" data-form="speaker" class="button button-cyan">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a href="#join" data-form="volunteer" class="button button-outline">JOIN THE CREW <strong aria-hidden="true">↗</strong></a></div>
+      <div class="form-deadlines" aria-label="Registration and application deadlines"><p><strong>Speaker and Volunteer forms:</strong> Close Saturday, October 24, 2026 at 11:59 PM Central Time.</p><p><strong>Attendee registration:</strong> Closes Monday, October 26, 2026 at 5:00 PM Central Time.</p></div>
     </div>
   </section>
   <div class="static-band" aria-label="Big ideas, new connections, run possibilities">
@@ -165,7 +167,7 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
         </article>
         <article class="speaker-card">
           <div class="speaker-time">1 PM SESSION BLOCK · CENTRAL</div>
-          <h3>How to Create Simulation Data</h3>
+          <h3>Getting started with Simulation!</h3>
           <div class="speaker-names"><a href="https://www.linkedin.com/in/krystal-cooper/" target="_blank" rel="noopener noreferrer" aria-label="Krystal Cooper on LinkedIn (opens in new tab)">Krystal Cooper ↗</a></div>
           <p class="speaker-abstract">How do you get started in simulation and modeling. Learn how to prepare your data, run your experiment and report your results.</p>
         </article>
@@ -188,7 +190,8 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
   <section id="join" class="join-section shell" aria-labelledby="join-heading"><div class="join-band">
     <div class="section-kicker">LET'S MAKE IT HAPPEN</div><h2 id="join-heading">GOOD THINGS<br><span class="accent-lime">START HERE.</span></h2><p>Come to learn and connect, propose a talk, or join the behind-the-scenes crew. We’re seeking speakers on careers, hiring, and emerging tech, plus LinkedIn Group Owners, Google Meet moderators, and administrative helpers.</p>
     <div class="join-actions"><a class="button button-lime" data-form="attendee" href="#join">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a class="button button-cyan" data-form="speaker" href="#join">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a class="button button-outline" data-form="volunteer" href="#join">VOLUNTEER WITH US <strong aria-hidden="true">↗</strong></a></div>
-    <div class="join-fineprint"><strong>All forms close Saturday, October 24, 2026 at 11:59 PM CT.</strong><br>The event is virtual. Meeting links will be provided to registered attendees separately.</div>
+    <div class="form-deadlines" aria-label="Registration and application deadlines"><p><strong>Speaker and Volunteer forms:</strong> Close Saturday, October 24, 2026 at 11:59 PM Central Time.</p><p><strong>Attendee registration:</strong> Closes Monday, October 26, 2026 at 5:00 PM Central Time.</p></div>
+    <div class="join-fineprint">The event is virtual. Meeting links will be provided to registered attendees separately.</div>
   </div></section>
 </main>
 <footer><div class="shell footer-inner"><div class="footer-name">RUN <span>TECH.EXE</span></div><div class="footer-right"><div>INSERT CURIOSITY. RUN POSSIBILITIES. &nbsp; <a href="#top">BACK TO TOP ↑</a></div><div class="footer-credits">Hosted by <a href="https://www.linkedin.com/in/jaraicarter/" target="_blank" rel="noopener noreferrer" aria-label="Jarai Carter, Ph.D. LinkedIn profile (opens in new tab)">Jarai Carter, Ph.D. ↗</a> · © 2026 The Career Corner, LLC. All rights reserved.</div></div></div></footer>
