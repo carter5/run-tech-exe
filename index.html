@@ -67,6 +67,13 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
 .speaker-card + .speaker-card{margin-top:18px}
 .speaker-abstract + .speaker-abstract{margin-top:13px}
 @media(max-width:700px){.speaker-tracks{grid-template-columns:1fr;gap:34px}.speaker-card{padding:25px 22px 28px}.speaker-card h3{font-size:26px}}
+
+/* Archive notice (Edit #3): only new styling added. */
+.archive-notice{background:#11111a;border-bottom:1px solid #343443}
+.archive-notice-inner{display:flex;align-items:center;justify-content:center;gap:17px;flex-wrap:wrap;padding:14px 0;text-align:center}
+.archive-notice-label{font:700 11px 'Space Mono',monospace;letter-spacing:.09em;color:var(--lime);white-space:nowrap}
+.archive-notice-inner p{margin:0;color:#d1d0dc;font-size:13px;line-height:1.6}
+@media(max-width:620px){.archive-notice-inner{gap:6px;padding:13px 0}.archive-notice-inner p{font-size:12px}}
 </style>
 </head>
 <body>
@@ -75,10 +82,17 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
   <div class="shell header-inner">
     <a class="brand" href="#top" aria-label="RUN TECH.EXE home">RUN <i>TECH</i><b>.EXE</b><span class="brand-dot" aria-hidden="true"></span></a>
     <nav class="navlinks" aria-label="Main navigation"><a href="#about">THE VIBE</a><a href="#topics">TALK TOPICS</a><a href="#speakers">SPEAKERS</a><a href="#join">GET INVOLVED</a></nav>
-    <a class="header-cta" data-form="attendee" href="#join">GRAB A SPOT ↗</a>
+    <a role="button" tabindex="0" aria-disabled="true" class="header-cta" data-form="attendee">GRAB A SPOT ↗</a>
   </div>
 </header>
 <main id="main">
+<aside class="archive-notice" aria-label="Event archive notice">
+  <div class="shell archive-notice-inner">
+    <span class="archive-notice-label">▣ EVENT ARCHIVE</span>
+    <p>RUN TECH.EXE took place on October 27, 2026. This page is preserved as a record of the event.</p>
+  </div>
+</aside>
+
   <section class="hero" id="top">
     <span class="floating-cross cross-a" aria-hidden="true">✳</span><span class="floating-cross cross-b" aria-hidden="true">✦</span><span class="floating-cross cross-c" aria-hidden="true">+</span>
     <div class="shell hero-content">
@@ -87,8 +101,7 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
       <h1 class="hero-label">Curiosity has <em>entered the chat.</em></h1>
       <p class="hero-desc">A virtual pop-up conference for fresh tech ideas, real career conversations, and the people who make both more interesting.</p>
       <div class="hero-stats"><span class="stat"><b>●</b> 100% ONLINE</span><span class="stat">11 AM–5 PM CENTRAL</span><span class="stat" data-event-date>DATE COMING SOON</span></div>
-      <div class="action-row"><a href="#join" data-form="attendee" class="button button-lime">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a href="#join" data-form="speaker" class="button button-cyan">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a href="#join" data-form="volunteer" class="button button-outline">JOIN THE CREW <strong aria-hidden="true">↗</strong></a></div>
-      <div class="form-deadlines" aria-label="Registration and application deadlines"><p><strong>Speaker and Volunteer forms:</strong> Close Saturday, October 24, 2026 at 11:59 PM Central Time.</p><p><strong>Attendee registration:</strong> Closes Monday, October 26, 2026 at 5:00 PM Central Time.</p></div>
+      <div class="action-row"><a role="button" tabindex="0" aria-disabled="true" data-form="attendee" class="button button-lime">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a role="button" tabindex="0" aria-disabled="true" data-form="speaker" class="button button-cyan">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a role="button" tabindex="0" aria-disabled="true" data-form="volunteer" class="button button-outline">JOIN THE CREW <strong aria-hidden="true">↗</strong></a></div>
     </div>
   </section>
   <div class="static-band" aria-label="Big ideas, new connections, run possibilities">
@@ -204,40 +217,16 @@ footer{border-top:1px solid #2b2a35;background:#08080b}.footer-inner{min-height:
   </div></section>
   <section id="join" class="join-section shell" aria-labelledby="join-heading"><div class="join-band">
     <div class="section-kicker">LET'S MAKE IT HAPPEN</div><h2 id="join-heading">GOOD THINGS<br><span class="accent-lime">START HERE.</span></h2><p>Come to learn and connect, propose a talk, or join the behind-the-scenes crew. We’re seeking speakers on careers, hiring, and emerging tech, plus LinkedIn Group Owners, Google Meet moderators, and administrative helpers.</p>
-    <div class="join-actions"><a class="button button-lime" data-form="attendee" href="#join">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a class="button button-cyan" data-form="speaker" href="#join">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a class="button button-outline" data-form="volunteer" href="#join">VOLUNTEER WITH US <strong aria-hidden="true">↗</strong></a></div>
-    <div class="form-deadlines" aria-label="Registration and application deadlines"><p><strong>Speaker and Volunteer forms:</strong> Close Saturday, October 24, 2026 at 11:59 PM Central Time.</p><p><strong>Attendee registration:</strong> Closes Monday, October 26, 2026 at 5:00 PM Central Time.</p></div>
+    <div class="join-actions"><a role="button" tabindex="0" aria-disabled="true" class="button button-lime" data-form="attendee">REGISTER TO ATTEND <strong aria-hidden="true">↗</strong></a><a role="button" tabindex="0" aria-disabled="true" class="button button-cyan" data-form="speaker">PROPOSE A TALK <strong aria-hidden="true">↗</strong></a><a role="button" tabindex="0" aria-disabled="true" class="button button-outline" data-form="volunteer">VOLUNTEER WITH US <strong aria-hidden="true">↗</strong></a></div>
     <div class="join-fineprint">The event is virtual. Meeting links will be provided to registered attendees separately.</div>
   </div></section>
 </main>
 <footer><div class="shell footer-inner"><div class="footer-name">RUN <span>TECH.EXE</span></div><div class="footer-right"><div>INSERT CURIOSITY. RUN POSSIBILITIES. &nbsp; <a href="#top">BACK TO TOP ↑</a></div><div class="footer-credits">Hosted by <a href="https://www.linkedin.com/in/jaraicarter/" target="_blank" rel="noopener noreferrer" aria-label="Jarai Carter, Ph.D. LinkedIn profile (opens in new tab)">Jarai Carter, Ph.D. ↗</a> · © 2026 The Career Corner, LLC. All rights reserved.</div></div></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
-<script>// Live Google Forms links — update here if the forms change.
-const SETTINGS = {
-  eventDate: 'OCT 27, 2026',
-  attendeeFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeIhWZ50ELkDeQcQn6I0IewSKdVyJjQFELEHE7cwXgF7SLsZw/viewform?usp=dialog',
-  speakerFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeF_v-x6yaRZPuV9KKfeijauR4C-s2EJYMkkx8DUVF_ab57ig/viewform?usp=dialog',
-  volunteerFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdq9K0ZNeHevqzY8qfSXrb-cv5NBkLcPJHgJ6G07zGn6iiO0g/viewform?usp=dialog'
-};
-
-document.querySelectorAll('[data-event-date]').forEach(node => { node.textContent = SETTINGS.eventDate; });
-let timer;
-document.querySelectorAll('[data-form]').forEach(link => {
-  const key = {attendee:'attendeeFormUrl', speaker:'speakerFormUrl', volunteer:'volunteerFormUrl'}[link.dataset.form];
-  const url = SETTINGS[key];
-  if (url && /^https:\/\//i.test(url)) {
-    link.href = url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  } else {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const toast = document.getElementById('toast');
-      toast.textContent = {attendee:'Registration link coming soon!',speaker:'Speaker form link coming soon!',volunteer:'Volunteer form link coming soon!'}[link.dataset.form];
-      toast.classList.add('on');
-      clearTimeout(timer);
-      timer = setTimeout(() => toast.classList.remove('on'), 3200);
-    });
-  }
+<script>
+// Preserve the original event date display. Form buttons remain visually animated but inactive.
+document.querySelectorAll('[data-event-date]').forEach(node => {
+  node.textContent = 'OCT 27, 2026';
 });
 </script>
 </body></html>
